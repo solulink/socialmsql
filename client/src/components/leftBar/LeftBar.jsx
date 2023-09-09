@@ -14,18 +14,25 @@ import Courses from "../../assets/12.png";
 import Fund from "../../assets/13.png";
 import { AuthContext } from "../../context/authContext";
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 const LeftBar = () => {
 
   const { currentUser } = useContext(AuthContext);
-
+  const navigate = useNavigate();
+  const handleClick =  () => {
+    // e.preventDefault();
+    navigate("/profile/"+currentUser.userId);
+    window.location.reload()
+    }
   return (
     <div className="leftBar">
       <div className="container">
         <div className="menu">
           <div className="user">
             <img
-              src={currentUser.profilePic}
+              onClick={handleClick}
+              src={"/upload/"+currentUser.profilePic}
               alt=""
             />
             <span>{currentUser.name}</span>

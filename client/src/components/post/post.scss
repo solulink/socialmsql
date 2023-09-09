@@ -11,7 +11,7 @@
 
     .container {
       padding: 20px;
-
+      position: relative;
       .user {
         display: flex;
         align-items: center;
@@ -41,6 +41,15 @@
             }
           }
         }
+        button {
+          position: absolute;
+          top: 30px;
+          right: 0;
+          border: none;
+          background-color: red;
+          padding: 5px;
+          cursor: pointer;
+        }
       }
 
       .content {
@@ -51,6 +60,7 @@
           max-height: 500px;
           object-fit: cover;
           margin-top: 20px;
+          border-radius: 10px;
         }
       }
 

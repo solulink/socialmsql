@@ -5,6 +5,7 @@ import commentRoutes from "./routes/comments.js"
 import likeRoutes from "./routes/likes.js"
 import postRoutes from "./routes/posts.js"
 import cookieParser from "cookie-parser"
+import relationshipRoutes from "./routes/relationship.js"
 import cors from "cors"
 import multer from "multer"
 
@@ -40,7 +41,7 @@ app.use("/api/auth", authRoutes)
 app.use("/api/comments", commentRoutes)
 app.use("/api/likes", likeRoutes)
 app.use("/api/posts", postRoutes)
-app.use("/api/relationships", postRoutes)
+app.use("/api/relationships", relationshipRoutes)
 app.listen(8800, () => {
     console.log("Server 8800");
 })
